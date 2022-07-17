@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    /* text-align: center;
+    padding: 5px; */
+    display: block;
+}
+
+body {
+    background-image: linear-gradient(to right, #ff930f , #fff95b);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.col-sm-2 {
+    padding: 10px;
+}
+
+.btn-default {
+    background-color: #411d00;
+    color:#FFF;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    background-color: #FFF;
+    color:#411d00;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Basics of Javascript & html forms</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+
+        <script type="text/javascript">
+            function fn_add() {
+                // alert("Addition begins!");
+                no1 = document.getElementById("txt_num1").value;
+                no2 = document.getElementById("txt_num2").value;
+                result = parseFloat(no1) + parseFloat(no2);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_sub() {
+                // alert("Subtraction begins!");
+                no1 = document.getElementById("txt_num1").value;
+                no2 = document.getElementById("txt_num2").value;
+                result = parseFloat(no1) - parseFloat(no2);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_mul() {
+                // alert("Multiplication begins!");
+                no1 = document.getElementById("txt_num1").value;
+                no2 = document.getElementById("txt_num2").value;
+                result = parseFloat(no1) * parseFloat(no2);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_div() {
+                no1 = document.getElementById("txt_num1").value;
+                no2 = document.getElementById("txt_num2").value;
+                result = parseFloat(no1) / parseFloat(no2);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_sin() {
+                no1 = document.getElementById("txt_num1").value;
+                result = Math.sin(no1);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_cos() {
+                no1 = document.getElementById("txt_num1").value;
+                result = Math.cos(no1);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_tan() {
+                no1 = document.getElementById("txt_num1").value;
+                result = Math.tan(no1);
+                document.getElementById("txt_num3").value = result;
+            }
+
+            function fn_log() {
+                no1 = document.getElementById("txt_num1").value;
+                result = Math.log10(no1);
+                document.getElementById("txt_num3").value = result;
+            }
+
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1 style="padding:10px;">Calculator</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <form action="" class="form">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2 d-flex justify-content-start">
+                            <label for="txt_num1">Number 1</label>
+                        </div>
+                        <div class="col-sm-2 d-flex justify-content-center">
+                            <input type="text" placeholder="Enter num1 " id="txt_num1">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2 d-flex justify-content-start">
+                            <label for="txt_num2">Number 2</label>
+                        </div>
+                        <div class="col-sm-2 d-flex justify-content-center">
+                            <input type="text" placeholder="Enter num2 " id="txt_num2">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-2 d-flex justify-content-start">
+                            <label for="txt_num3">Result</label>
+                        </div>
+                        <div class="col-sm-2 d-flex justify-content-center">
+                            <input type="text" placeholder="Enter num3 " id="txt_num3">
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="btn-group me-2" role="group" aria-label="First group" style="width:100%">
+                            <button type="button" class="btn btn-default" onclick="fn_add();">+</button>
+                            <button type="button" class="btn btn-default" onclick="fn_sub();">-</button>
+                            <button type="button" class="btn btn-default" onclick="fn_mul();">*</button>
+                            <button type="button" class="btn btn-default" onclick="fn_div();">/</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 pt-2">
+                            <button type="button" style="width:100%" class="btn btn-default" onclick="fn_sin();">Sin (uses value from Num1)</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 pt-2">
+                            <button type="button" style="width:100%" class="btn btn-default" onclick="fn_cos();">Cos (uses value from Num1)</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 pt-2">
+                            <button type="button" style="width:100%" class="btn btn-default" onclick="fn_tan();">Tan (uses value from Num1)</button>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-4 pt-2">
+                            <button type="button" style="width:100%" class="btn btn-default" onclick="fn_log();">Log (uses value from Num1)</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
