@@ -26,3 +26,7 @@ body {
     background-color: #FFF;
     color:#411d00;
 }
+
+.rounded-pill {
+    text-align: center;
+}
